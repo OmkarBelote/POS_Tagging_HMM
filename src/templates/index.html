@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POS Tagging with HMM</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>POS Tagging with HMM</h1>
+            <div class="subtitle">Natural Language Processing</div>
+        </header>
+        
+        <main>
+            <div class="input-section">
+                <form method="POST" action="/">
+                    <textarea id="sentence-input" name="sentence" placeholder="Enter a sentence to tag..."></textarea>
+                    <button type="submit" id="tag-button">Tag Sentence</button>
+                </form>
+            </div>
+            
+            {% if tagged_sentence %}
+            <div id="result" class="result-section active">
+                <h2>Tagged Results</h2>
+                <div id="tagged-content" class="tagged-content">
+                    {{ tagged_sentence }}
+                </div>
+            </div>
+            {% else %}
+            <div id="result" class="result-section">
+                <h2>Tagged Results</h2>
+                <div id="tagged-content" class="tagged-content"></div>
+            </div>
+            {% endif %}
+        </main>
+        
+        <footer>
+            <p>&copy; 2025 Omkar Belote. All Rights Reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
