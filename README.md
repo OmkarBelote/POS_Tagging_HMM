@@ -35,7 +35,7 @@ This project uses:
 
 ## 🧾 Example Input
 
-Input Sentence: He is playing football.
+Input Sentence: He is playing football
 
 Output: [('He', 'PRON'), ('is', 'AUX'), ('playing', 'VERB'), ('football', 'NOUN')]
 
