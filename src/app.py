@@ -1,11 +1,12 @@
 from flask import Flask, request, render_template, jsonify
 from hmm import HMM
 from viterbi import viterbi
+import os
 
 app = Flask(__name__)
 
 # Use raw string to fix path issue
-corpus_path = r"C:\Users\omkar_zu2lrhd\OneDrive\Desktop\Projects\POS_Tagging_HMM\data\corpus.txt"
+corpus_path = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'data', 'corpus.txt'))
 hmm_model = HMM(corpus_path)
 
 @app.route('/', methods=['GET', 'POST'])
