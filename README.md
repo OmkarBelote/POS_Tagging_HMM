@@ -19,7 +19,7 @@ This project uses:
 
 ## 🚀 Live Demo
 
-🌐 [POS_Tagging_HMM](https://pos-tagging-hmm.onrender.com)
+🌐 [POS_Tagging_HMM](https://pos-taggging-hmm.up.railway.app/)
 
 ---
 
